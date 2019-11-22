@@ -60,6 +60,8 @@ def ejercicio_1():
 	while(True):
 
 		if cont == 1000:
+			print("--------------------------------------------------")
+			print("Mini 6 por Jose Pablo Viana y Ana Lucia Diaz Leppe")
 			print("\n-------------------- EJERCICIO 1 --------------------")
 			print("para la funcion: 15*x1 + 30*x2 + 4*x1*x2 - 2*x1**2 - 4*x2**2 ")
 			print("Los valores para las variables x1, x2 que hacen el maximo son:")
