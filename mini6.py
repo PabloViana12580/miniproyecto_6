@@ -226,7 +226,47 @@ def ejercicio_3():
 			print(population[0])
 			print(max_fit)
 			print("\n-------------------- EJERCICIO 4 --------------------")
-			print("Se encuentra descrito como comentario dentro del código")
+			print("""
+---------------------------------------------- Ejercicio 4 ----------------------------------------------
+
+La siguiente aplicación de algoritmos genéticos es sacada de: 
+Operation Optimization of Natural Gas Transmission Pipelines
+Based on Stochastic Optimization Algorithms: A Review (Xia Wu ,Changjun Li ,Yufa He, Wenlong Jia)
+School of Petroleum Engineering, Southwest Petroleum University, Chengdu 610500, China
+CNOOC Research Institute, Beijing 100027, China. Publicado: 12 Abril 2018
+
+https://www.researchgate.net/publication/324489562_Operation_Optimization_of_Natural_Gas_Transmission_Pipelines_Based_on_Stochastic_Optimization_Algorithms_A_Review
+
+El gas natural es una fuente limpia, de bajo carbono y alta calidad que es usada a nivel mundial.
+Desde 1987 se utilizan algoritmos genéticos, para controlar las tuberias de este gas.
+
+Se construyó un modelo de optimización para un sistema de tuberías de gas natural con cuarenta compresores con el fin de minimizar la potencia total
+de todos los compresores. Se supuso que la eficiencia de los compresores y los aumentos de carga son constantes; así que las variables
+para ser optimizados son los estados de funcionamiento de los compresores. La población general consistia de 100 conjuntos de datos que representaban
+los estados de los compresores. 
+
+Los alelos a utilizar en este algoritmo genético, son cada uno de los valores para las distintas variables que hacen el traslado del gas
+por el tubo exitoso. El fenotipo es el conjunto de posibles soluciones optimas al paso del gas por el tubo. El genotipo es la representación
+contextualizada de un fenotipo específico. 
+
+En el caso del traslado de gas natural por tuberias cada cromosoma esta dividido de la siguiente manera 
+
+	| ON/OFF estado |	Variables de presión del gas | Variables de fluidez |
+
+
+La función fitness para este caso específico no es dada como tal, si no, más bien descrita. Es una función que tiene como entradas los estados de los
+compresores y da como salida un entero que califica el funcionamiento global de todos los compresores. 
+
+Para el criterio de selección se normalizaron todos los resultados obtenidos de la función fitness. Después, existe un indice R, el cual sirve como 
+discriminante entre aquellos "mejores genericamente" y los que no. Los resultados normalizados que fueran mayores a este criterio R son los que pasan
+a la siguiente generación. 
+
+El criterio de cruce que se utiliza en el paper es cross-over con una probabilidad de 0.7. Se utilizo un proceso de mutación aleatoria con una 
+probabilidad de 0.01. Se concluyó que los resultados convergían después de las 50 iteraciones. 
+
+
+
+""")
 			break
 
 		#Evaluamos cada uno de los cromosomas en la funcion fitness
@@ -280,44 +320,4 @@ ejercicio_1()
 ejercicio_2()
 ejercicio_3()
 
-"""
----------------------------------------------- Ejercicio 4 ----------------------------------------------
 
-La siguiente aplicación de algoritmos genéticos es sacada de: 
-Operation Optimization of Natural Gas Transmission Pipelines
-Based on Stochastic Optimization Algorithms: A Review (Xia Wu ,Changjun Li ,Yufa He, Wenlong Jia)
-School of Petroleum Engineering, Southwest Petroleum University, Chengdu 610500, China
-CNOOC Research Institute, Beijing 100027, China. Publicado: 12 Abril 2018
-
-https://www.researchgate.net/publication/324489562_Operation_Optimization_of_Natural_Gas_Transmission_Pipelines_Based_on_Stochastic_Optimization_Algorithms_A_Review
-
-El gas natural es una fuente limpia, de bajo carbono y alta calidad que es usada a nivel mundial.
-Desde 1987 se utilizan algoritmos genéticos, para controlar las tuberias de este gas.
-
-Se construyó un modelo de optimización para un sistema de tuberías de gas natural con cuarenta compresores con el fin de minimizar la potencia total
-de todos los compresores. Se supuso que la eficiencia de los compresores y los aumentos de carga son constantes; así que las variables
-para ser optimizados son los estados de funcionamiento de los compresores. La población general consistia de 100 conjuntos de datos que representaban
-los estados de los compresores. 
-
-Los alelos a utilizar en este algoritmo genético, son cada uno de los valores para las distintas variables que hacen el traslado del gas
-por el tubo exitoso. El fenotipo es el conjunto de posibles soluciones optimas al paso del gas por el tubo. El genotipo es la representación
-contextualizada de un fenotipo específico. 
-
-En el caso del traslado de gas natural por tuberias cada cromosoma esta dividido de la siguiente manera 
-
-	| ON/OFF estado |	Variables de presión del gas | Variables de fluidez |
-
-
-La función fitness para este caso específico no es dada como tal, si no, más bien descrita. Es una función que tiene como entradas los estados de los
-compresores y da como salida un entero que califica el funcionamiento global de todos los compresores. 
-
-Para el criterio de selección se normalizaron todos los resultados obtenidos de la función fitness. Después, existe un indice R, el cual sirve como 
-discriminante entre aquellos "mejores genericamente" y los que no. Los resultados normalizados que fueran mayores a este criterio R son los que pasan
-a la siguiente generación. 
-
-El criterio de cruce que se utiliza en el paper es cross-over con una probabilidad de 0.7. Se utilizo un proceso de mutación aleatoria con una 
-probabilidad de 0.01. Se concluyó que los resultados convergían después de las 50 iteraciones. 
-
-
-
-"""
