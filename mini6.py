@@ -223,6 +223,8 @@ def ejercicio_3():
 			print("Los valores para las variables x1, x2 que hacen el maximo son:")
 			print(population[0])
 			print(max_fit)
+			print("\n-------------------- EJERCICIO 4 --------------------")
+			print("Se encuentra descrito como comentario dentro del código")
 			break
 
 		#Evaluamos cada uno de los cromosomas en la funcion fitness
